@@ -1,0 +1,20 @@
+---
+title: "Test post"
+date: 2022-05-21
+tags:
+  - Homeopathy
+header:
+  teaser: "/assets/images/tree.png"
+preview: "/assets/images/tree.png"
+excerpt: null
+related: true
+toc: true
+toc_label: Contents
+description: "📚"
+---
+
+{% include promo.html %}
+
+## Introduction
+
+Test text
