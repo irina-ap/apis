@@ -1,9 +1,22 @@
-<div class="page__footer-follow">
-  <ul class="social-icons">
-    {% if site.data.ui-text[site.locale].follow_label %}
-      <li><strong>{{ site.data.ui-text[site.locale].follow_label }}</strong></li>
-    {% endif %}
-  </ul>
-</div>
+{% if page.lang != "en" %}
+  {% assign lang_url = page.url | split:"/ru" | slice:1 | join:"/ru" %}
+{% else %}
+  {% assign lang_url = page.url %}
+{% endif %}
 
-<div class="page__footer-copyright">&nbsp;&copy; {{ site.time | date: '%Y' }} {{ site.name | default: site.title }}</div>
+<div class="page__footer-copyright">
+  &nbsp;&copy; {{ site.time | date: '%Y' }} {{ site.data.translations['author']['name'][page.lang] | default: site.title }}
+
+  {% for lang in site.languages %}
+    {% if lang == "en" %}
+      {% if page.lang != "en" %}
+        {% assign page_url = page.url | split:"/ru" | slice:1 | join:"/ru" %}
+      {% else %}
+        {% assign page_url = page.url %}
+      {% endif %}
+      <a href="{{ lang_url }}" class="footer__link" style="float: right; font-weight: bold;">🇮🇪</a>
+    {% elsif lang == "ru" %}
+      <a href="/{{ lang }}{{ lang_url }}" class="footer__link" style="float: right; font-weight: bold;">🇷🇺|</a>
+    {% endif %}
+  {% endfor %}
+</div>

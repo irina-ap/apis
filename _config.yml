@@ -1,6 +1,6 @@
 # Site Settings
 locale                   : "en-IE"
-title                    : "Irina Homeopathy Journey"
+title                    : "𝐼𝓇𝒾𝓃𝒶_𝐻♡𝓂𝑒♡𝓅𝒶𝓉𝒽𝓎.𝒥♡𝓊𝓇𝓃𝑒𝓎"
 title_separator          : "-"
 name                     : "Irina Alter-Pesotskaia"
 description              : "Homeopathy is a journey to your health… or heart? :)"
@@ -13,17 +13,9 @@ breadcrumbs              : false # true, false (default)
 words_per_minute         : 200
 comments:
   provider               : false # "disqus", "discourse", "facebook", "google-plus", "staticman", "custom"
-search                   : true # true, false (default)
-search_full_content      : true # true, false (default)
-search_provider          : "algolia"
-algolia:
-  application_id         : '76KARRMVDF'
-  index_name             : 'homeopathyjourney'
-  search_only_api_key    : '554e5a7ecd59c4dce4369f66e2d1d871'
-  powered_by             : true
-  files_to_exclude:
-    - 404.md
-    - index.html
+search                   : false # true, false (default)
+search_full_content      : false # true, false (default)
+search_provider          :
 
 # SEO Related
 google_site_verification : "1rokdPrmFrd-xH42Aj0ryD1dsb5mcfVO5RzazdkAEOg"
@@ -55,8 +47,6 @@ google_analytics         : "G-WJL82RCLDP"
 author:
   name             : "Irina Alter-Pesotskaia"
   avatar           : "/assets/images/profile.png"
-  bio              : "2nd year student at The Irish School of Homeopathy 📚"
-  location         : "Greystones, Ireland"
   email            :
   uri              :
   bitbucket        :
@@ -67,7 +57,6 @@ author:
   foursquare       :
   google_plus      :
   keybase          :
-  instagram        : "irina_homeopathyjourney"
   lastfm           :
   github           :
   linkedin         :
@@ -176,6 +165,9 @@ permalink: /:categories/:title/
 # paginate_path: /page:num/
 timezone: Europe/Dublin # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
+# Localization
+languages: ["en", "ru"]
+
 # Plugins
 plugins:
   - jekyll-paginate
@@ -185,7 +177,6 @@ plugins:
   - jemoji
   - jekyll-include-cache
   - jekyll-seo-tag
-  - jekyll-algolia
 #   - minimal-mistakes-jekyll
 
 # # mimic GitHub Pages with --safe
@@ -197,7 +188,6 @@ whitelist:
   - jemoji
   - jekyll-include-cache
   - jekyll-seo-tag
-  - jekyll-algolia
 #   - minimal-mistakes-jekyll
 
 # HTML Compression

@@ -1,18 +1,17 @@
 ---
 title:
+lang: en
 excerpt: {{ site.description }}
 layout: archive
-permalink: /
+permalink: /patient/
 author_profile: true
-comments: false
-header:
-  teaser: "/assets/images/tree.png"
 ---
 
 <ul>
-  <h1>Posts</h1>
+  <h1>{{ site.data.translations['posts'][page.lang] }}</h1>
   {% capture written_year %}'None'{% endcapture %}
-  {% for post in site.posts %}
+  {% assign posts = site.posts | where:"lang", page.lang %}
+  {% for post in posts %}
     {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
     {% if year != written_year %}
       {% if written_year != "'None'" %}<br>{% endif %}

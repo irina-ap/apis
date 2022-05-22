@@ -14,6 +14,5 @@ group :jekyll_plugins do
   gem "jemoji"
   gem "jekyll-include-cache"
   gem "jekyll-seo-tag"
-  gem 'jekyll-algolia', '~> 1.0'
   gem "minimal-mistakes-jekyll"
 end

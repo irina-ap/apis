@@ -1,36 +1,40 @@
-{% if post.header.teaser %}
-  {% capture teaser %}{{ post.header.teaser }}{% endcapture %}
-{% else %}
-  {% assign teaser = site.teaser %}
-{% endif %}
+{% if post.lang == page.lang %}
+  {% if post.header.teaser %}
+    {% capture teaser %}{{ post.header.teaser }}{% endcapture %}
+  {% else %}
+    {% assign teaser = site.teaser %}
+  {% endif %}
 
-{% if post.id %}
-  {% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" %}
-{% else %}
-  {% assign title = post.title %}
-{% endif %}
+  {% if post.id %}
+    {% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" %}
+  {% else %}
+    {% assign title = post.title %}
+  {% endif %}
 
-<div class="{{ include.type | default: "list" }}__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    {% if include.type == "grid" and teaser %}
-      <div class="archive__item-teaser">
-        <img src="{{ teaser | relative_url }}" alt="">
-      </div>
-    {% endif %}
-    <div style="width:100%;">
-      <p class="archive__item-title" itemprop="headline" float="left" style="margin-bottom:0em; margin-top:0.25em;">
-        <!-- <img src="{{ post.preview }}" alt="Preview"> -->
-        {% if post.link %}
-          <a href="{{ post.link }}" style="text-decoration: none;">{{ title }}</a> <a href="{{ post.url | relative_url }}" rel="permalink"><i class="fas fa-link" aria-hidden="true" title="permalink";></i><span class="sr-only">Permalink</span></a>
-        {% else %}
-          <a href="{{ post.url | relative_url }}" rel="permalink" style="text-decoration: none;">{{ title }}</a>
-        {% endif %}
-      </p>
-    </div>
-    <div id="post-date" style="width:100%; font-style:italic; font-size:15px; margin-bottom:0.25em;">
-      {% if post.date != null %}
-        {{ post.date | date: '%B %d' }}
+  <div class="{{ include.type | default: "list" }}__item">
+    <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+      {% if include.type == "grid" and teaser %}
+        <div class="archive__item-teaser">
+          <img src="{{ teaser | relative_url }}" alt="">
+        </div>
       {% endif %}
-    </div>
-  </article>
-</div>
+      <div style="width:100%;">
+        <p class="archive__item-title" itemprop="headline" float="left" style="margin-bottom:0em; margin-top:0.25em;">
+          <!-- <img src="{{ post.preview }}" alt="Preview"> -->
+          {% if post.link %}
+            <a href="{{ post.link }}" style="text-decoration: none;">{{ title }}</a> <a href="{{ post.url | relative_url }}" rel="permalink"><i class="fas fa-link" aria-hidden="true" title="permalink";></i><span class="sr-only">Permalink</span></a>
+          {% else %}
+            <a href="{{ post.url | relative_url }}" rel="permalink" style="text-decoration: none;">{{ title }}</a>
+          {% endif %}
+        </p>
+      </div>
+      <div id="post-date" style="width:100%; font-style:italic; font-size:15px; margin-bottom:0.25em;">
+        {% if post.date != null %}
+          {% assign month = post.date | date: "%-m" | minus: 1 %}
+          {% assign day = post.date | date: "%-d" %}
+          {{ site.data.translations.months[page.lang][month] }} {{ day }}
+        {% endif %}
+      </div>
+    </article>
+  </div>
+{% endif %}

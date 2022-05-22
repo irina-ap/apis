@@ -1,0 +1,97 @@
+posts:
+  en: "Posts"
+  ru: "Статьи"
+
+nav_bar:
+  en:
+    - title: "Book a session"
+      url: /book-a-session/
+    - title: "Pricing"
+      url: /pricing/
+    - title: "Patient"
+      url: /patient/
+    - title: "Good to see you"
+      url: /good-to-see-you/
+  ru:
+    - title: "Забронировать сессию"
+      url: /ru/book-a-session/
+    - title: "Стоимость"
+      url: /ru/pricing/
+    - title: "Пациенту"
+      url: /ru/patient/
+    - title: "Рада знакомству"
+      url: /ru/good-to-see-you/
+
+booking:
+  name:
+    en: "Name"
+    ru: "ФИО"
+  first_name:
+    en: "First Name"
+    ru: "Имя и Отчество"
+  last_name:
+    en: "Last Name"
+    ru: "Фамилия"
+  email:
+    en: "Email"
+    ru: "Электронная почта"
+  phone:
+    en: "Phone"
+    ru: "Номер телефона"
+  phone_pattern:
+    en: "+353-12-345-67-89"
+    ru: "+7-123-456-78-90"
+  message:
+    en: "Message"
+    ru: "Текст"
+  submit:
+    en: "Submit"
+    ru: "Отправить"
+  template:
+    en: "homeopathyjourney_en"
+    ru: "homeopathyjourney_ru"
+  alert:
+    en: "Form submitted successfully!"
+    ru: "Форма успешно отправлена!"
+
+author:
+  name:
+    en: "Irina Alter-Pesotskaia"
+    ru: "Ирина Альтер-Песоцкая"
+  location:
+    en: "Greystones, Ireland"
+    ru: "Greystones, Ireland"
+  bio:
+    en: "3rd year student at The Irish School of Homeopathy 📚"
+    ru: "Студентка 3го курса Ирландской Гомеопатической Школы 📚"
+  instagram:
+    en: "irina_homeopathyjourney"
+    ru: "irina_homeopathyjourney_ru"
+
+months:
+  en:
+    - January
+    - February
+    - March
+    - April
+    - May
+    - June
+    - July
+    - August
+    - September
+    - October
+    - November
+    - December
+  ru:
+    - Январь
+    - Февраль
+    - Март
+    - Апрель
+    - Май
+    - Июнь
+    - Июль
+    - Август
+    - Сентябрь
+    - Октябрь
+    - Ноябрь
+    - Декабрь
