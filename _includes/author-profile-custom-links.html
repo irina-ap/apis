@@ -1,9 +1,14 @@
-
 {% if page.lang == "ru" %}
   <li>
     <i class="fa fa-fw fa-map-pin" aria-hidden="true"></i><span class="label">World ➡️ online</span>
   </li>
 {% endif %}
+
+<li>
+  <a href="https://wa.me/353851642357" itemprop="sameAs" rel="nofollow noopener noreferrer">
+    <i class="fab fa-fw fa-whatsapp" aria-hidden="true"></i><span class="label">WhatsApp</span>
+  </a>
+</li>
 
 <li>
   <a href="https://instagram.com/{{ site.data.translations['author']['instagram'][page.lang] }}" itemprop="sameAs"
@@ -13,15 +18,9 @@
 </li>
 
 {% if page.lang == "ru" %}
-  <li>
-    <a href="https://t.me/irina_homeopathyjourney_ru" itemprop="sameAs" rel="nofollow noopener noreferrer">
-      <i class="fab fa-fw fa-telegram" aria-hidden="true"></i><span class="label">Telegram</span>
-    </a>
-  </li>
-{% endif %}
-
 <li>
-  <a href="https://wa.me/353851642357" itemprop="sameAs" rel="nofollow noopener noreferrer">
-    <i class="fab fa-fw fa-whatsapp" aria-hidden="true"></i><span class="label">WhatsApp</span>
+  <a href="https://t.me/irina_homeopathyjourney_ru" itemprop="sameAs" rel="nofollow noopener noreferrer">
+    <i class="fab fa-fw fa-telegram" aria-hidden="true"></i><span class="label">Telegram</span>
   </a>
 </li>
+{% endif %}

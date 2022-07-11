@@ -6,20 +6,18 @@ author_profile: true
 ---
 
 <form class="form scroll-effect" id="bookingForm">
-  <label for="name">{{ site.data.translations.booking["name"][page.lang] }}</label>
   <input id="first_name" type="text" placeholder="{{ site.data.translations.booking['first_name'][page.lang] }}" required/>
   <input id="last_name" type="text" placeholder="{{ site.data.translations.booking['last_name'][page.lang] }}" required/>
 
-  <label for="email">{{ site.data.translations.booking["email"][page.lang] }}</label>
-  <input type="email" id="email" required />
+  <input type="email" id="email" placeholder="{{ site.data.translations.booking['email'][page.lang] }}" required />
 
-  <label for="phone">{{ site.data.translations.booking["phone"][page.lang] }}</label>
-  <input type="tel" id="phone" required />
+  <input type="tel" id="telephone" placeholder="{{ site.data.translations.booking['phone'][page.lang] }}" required />
 
-  <label for="message">{{ site.data.translations.booking["message"][page.lang] }}</label>
-  <textarea id="message" rows="5" maxlength="500" required></textarea>
+  <textarea id="message" rows="5" maxlength="500" placeholder="{{ site.data.translations.booking['message'][page.lang] }}" required></textarea>
 
-  <input type="submit" id="submit" value='{{ site.data.translations.booking["submit"][page.lang] }}'/>
+  <div style="display:flex; justify-content:flex-end; width:100%; padding:0;">
+    <input type="submit" id="submit" value='{{ site.data.translations.booking["submit"][page.lang] }}'/>
+  </div>
 </form>
 
 <script type="text/javascript">

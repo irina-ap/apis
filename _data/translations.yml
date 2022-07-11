@@ -36,17 +36,14 @@ booking:
     en: "Email"
     ru: "Электронная почта"
   phone:
-    en: "Phone"
+    en: "Telephone"
     ru: "Номер телефона"
-  phone_pattern:
-    en: "+353-12-345-67-89"
-    ru: "+7-123-456-78-90"
   message:
-    en: "Message"
-    ru: "Текст"
+    en: "Leave a message"
+    ru: "Оставить сообщение"
   submit:
-    en: "Submit"
-    ru: "Отправить"
+    en: "Complete appointment"
+    ru: "Завершить бронирование"
   template:
     en: "homeopathyjourney_en"
     ru: "homeopathyjourney_ru"

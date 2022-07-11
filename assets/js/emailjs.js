@@ -4,8 +4,9 @@ function sendEmail() {
     "homeopathyjourney",
     email_template,
     {
-      name: document.getElementById("name").value,
+      name: `${document.getElementById("first_name").value} ${document.getElementById("last_name").value}`,
       message: document.getElementById("message").value,
+      telephone: document.getElementById("telephone").value,
       email: document.getElementById("email").value
     },
     "9v9IUYLbFUkJid1pL"
